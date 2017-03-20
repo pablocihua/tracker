@@ -1,0 +1,14 @@
+{
+  "globalDependencies": {
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160619023404",
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "jwt-decode": "registry:dt/jwt-decode#1.4.0+20160317120654",
+    "node": "registry:dt/node#6.0.0+20160621231320"
+    
+  },
+  "dependencies": {
+    "jsonapi-datastore": "registry:npm/jsonapi-datastore#0.4.0-beta+20160620005651"
+  }
+}

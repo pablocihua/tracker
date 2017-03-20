@@ -1,0 +1,87 @@
+
+<style type="text/css">
+  .top-content {
+    padding-top: 75px;
+}
+</style>
+<div class="col-lg-6">
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+        
+        <h3>Invitar Usuario</h3>
+      
+         <form class="m-t" [formGroup]="formInvitado" (ngSubmit)="invited()" >
+            <div class="form-group">
+                 <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre" name="nombre" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="email" placeholder="Email" name="email" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="telefono" placeholder="Telefono" name="telefono" ngModel required>
+            </div>
+
+     
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="nombre_comercial" placeholder="Nombre Comercial" name="nombre_comercial" ngModel required>
+            </div>
+
+             <div class="form-group">
+                <input type="text" class="form-control" formControlName="razon_social" placeholder="Razon Social" name="razon_social" ngModel required>
+            </div>
+
+             <div class="form-group">
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" name="password" ngModel required>
+            </div>
+
+           
+
+
+            <button type="submit" class="btn btn-primary block full-width m-b">Invitar</button>
+
+        </form>
+        <p class="m-t"> <small>Treck &copy; 2017</small> </p>
+    </div>
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+
+<div class="top-content">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Usuarios Invitados</h5>
+                   
+                    </div>
+                    <div class="ibox-content">
+
+                        <table class="table" >
+                            <thead> 
+                            <tr >
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Telefono</th>
+                                <th>Comercial</th>
+                                 <th>Accion</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let data of datausuario">
+                                <td>{{data.nombre}}</td>
+                                <td>{{data.email}}</td>
+                                <td>{{data.telefono}}</td>
+                                <td>{{data.nombre_comercial}}</td>
+                                 <td>
+                                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6"  (click)="inviteddelete(data._id)" > Anular</button></td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+  </div>
+
+  </div>

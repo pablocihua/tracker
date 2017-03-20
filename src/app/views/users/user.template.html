@@ -1,0 +1,91 @@
+<style type="text/css">
+    
+    .panel.panel-primary.changepassword {
+    margin: 40px;
+}
+.panel-body.centrar {
+    text-align: center;
+}
+</style>
+<div class="col-lg-6">
+
+
+<div class="ibox-title float-e-margins">
+                             
+
+
+
+
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+       
+        <h3>Editar Usuario</h3>
+      
+         <form class="m-t" [formGroup]="formUpdate" (ngSubmit)="update()" >
+            <div class="form-group">
+                 <input type="text" class="form-control" [(ngModel)]="user.nombre" formControlName="nombre" placeholder="Nombre" name="nombre" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="user.email"  formControlName="email" placeholder="Email" name="email" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="user.telefono" formControlName="telefono" placeholder="Telefono" name="telefono" ngModel required>
+            </div>
+
+            
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="user.nombre_comercial" formControlName="nombre_comercial" placeholder="Nombre Comercial" name="nombre_comercial" ngModel required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="user.razon_social" formControlName="razon_social" placeholder="Razon Social" name="razon_social" ngModel required>
+            </div>
+
+           
+   
+
+            <button type="submit" class="btn btn-primary block full-width m-b">Actualizar</button>
+
+        </form>
+        <p class="m-t"> <small>Treck &copy; 2014</small> </p>
+    
+    </div>
+</div>
+
+
+<div class="panel panel-primary changepassword">
+    <div class="panel-heading">
+        <i class="fa fa-warning"></i> Cambiar el password
+    </div>
+    <div class="panel-body centrar">
+        <form class="m-t" [formGroup]="formChangePassword" >
+
+          <div class="form-group">
+          <input type="text" style="display:none" class="form-control" [(ngModel)]="user.email"  formControlName="email" placeholder="Email" name="email" ngModel >
+       </div>
+
+       <div class="form-group">
+           <input type="password" class="form-control"  formControlName="old_password" placeholder="Actual Password" name="old_password" ngModel required>
+       </div>
+
+       <div class="form-group">
+           <input type="password" class="form-control"  formControlName="new_password" placeholder="Nuevo Password" name="new_password" ngModel required>
+       </div>
+
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6"  (click)="onClick()" >
+        cambiar password
+    </button>
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
